@@ -1,0 +1,219 @@
+ 
+/* CSS Document */
+body {
+	font:12px arial;
+	color: #222;
+	text-align:center;
+	padding:35px; }
+ 
+/* Let's get this party started */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background:#AAAAAA;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background:#AAAAAA; 
+}
+ 
+form, p, span {
+	margin:0;
+	padding:0; }
+ 
+input { font:12px arial; }
+ 
+a {
+	color:#0000FF;
+	text-decoration:none; }
+ 
+	a:hover { text-decoration:underline; }
+ 
+#wrapper {
+	float:left;
+	padding-bottom:25px;
+	width:504px;
+	height:405px;
+	 }
+	
+#loginform {
+	margin:auto;
+	padding-bottom:25px;
+	background:#EBF4FB;
+	width:504px;
+	border:1px solid #ACD8F0;
+	padding-top:18px; 
+}
+ 
+#loginform p { margin: 5px; }
+ 
+#chatbox {
+	text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	padding:10px;
+	background:#fff;
+	height:270px;
+	width:430px;
+	overflow:auto;
+	border:1px solid #ACD8F0;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+	word-wrap: break-word;
+	}
+ 
+#usermsg {
+	width:376px;
+	height:20px;
+	font-size:16px;
+	border:1px solid #ACD8F0; 
+}
+ 
+#submit { width: 60px; }
+ 
+.error { color: #ff0000; }
+ 
+#menu { padding:12.5px 25px 12.5px 25px; font-size:14px; }
+ 
+.welcome { float:left; }
+ 
+.logout { float:right; }
+ 
+.msgln { margin:0 0 2px 0; }
+
+#online_users {
+	width:200px;
+	float:left;
+	height:405px;
+	border-left:0px;
+	padding-bottom:25px;	
+}
+
+
+
+#online_list {
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+	text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	padding:10px;
+	background:#fff;
+	height:270px;
+	width:150px;
+	border:1px solid #ACD8F0;
+	overflow:auto;	
+}
+#online_menu {
+	padding-top:12.5px;
+	padding-bottom:12.5px;	
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+#panel {
+  float: left;
+  height: 100px;
+  width: calc(20% - 25px);
+  margin: 8px 25px 0 0;  
+}
+
+
+#box {
+  width: 200px;
+  height: 400px;
+  background: #ccc;
+  border: 5px solid #333;
+  border-radius: 5px;
+}
+
+#Scenario1 {
+background-color:#FFFFFF;height:80px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+#Scenario2 {
+background-color:#FFFFFF;height:80px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	
+	#Scenario3 {
+background-color:#FFFFFF;height:80px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	#Scenario4 {
+background-color:#FFFFFF;height:80px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	
+	
+	#Scenario2_1 {
+background-color:#FFFFFF;height:180px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+#Scenario2_2 {
+background-color:#FFFFFF;height:180px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	
+	#Scenario2_3 {
+background-color:#FFFFFF;height:180px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	#Scenario2_4 {
+background-color:#FFFFFF;height:180px;width:150px;float:left;border:3px solid #ACD8F0;text-align:left;
+	margin:0 auto;
+	margin-bottom:25px;
+	}
+	
+	
+	
+#cont {
+	margin:auto;
+	background:#F0FFFD;
+	width: 704px;	
+	height:430px;
+		border:1px solid #ACD8F0;
+	 -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px; 
+}
+button {
+	text-align:center;
+	background-color: #000033;
+	margin-right:2px;
+	width:70px;
+	height:24px;
+	padding: 6px 10px 6px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 1;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+	border-bottom: 1px solid rgba(0,0,0,0.25);
+	cursor: pointer;	
+	border: 0px;
+}
