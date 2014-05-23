@@ -78,7 +78,7 @@ a.button {
 $(document).ready(function(){	
 	function first_1(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first1.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario1").html(html); //Insert chat log into the #chatbox div						
@@ -86,10 +86,9 @@ $(document).ready(function(){
 		});
 		}
 	setInterval (first_1, 500);
-	
 	function first_2(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first2.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2").html(html); //Insert chat log into the #chatbox div						
@@ -98,10 +97,9 @@ $(document).ready(function(){
 		}
 		
 		setInterval (first_2, 500);
-		
 		function first_3(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first3.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario3").html(html); //Insert chat log into the #chatbox div						
@@ -111,18 +109,63 @@ $(document).ready(function(){
 		setInterval (first_3, 500);
 		function first_4(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first4.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario4").html(html); //Insert chat log into the #chatbox div						
 		  	},
 		});
-	}
+		}
 		setInterval (first_4, 500);
 	
-	$("#exit").click(function(){
-		window.location = 'index.php';
-	});
+	
+	//////CHAT FUNCTIONS
+	
+	
+		function c_first_1(){	 
+		$.ajax({
+			url: "php/get_message.php",
+			cache: false,
+			success: function(html){		
+				$("#Scenario2_1").html(html); //Insert chat log into the #chatbox div						
+		  	},
+		});
+		}
+	setInterval (c_first_1, 500);
+	
+	function c_first_2(){	 
+		$.ajax({
+			url: "php/get_message.php",
+			cache: false,
+			success: function(html){		
+				$("#Scenario2_2").html(html); //Insert chat log into the #chatbox div						
+		  	},
+		});
+		}
+		
+		setInterval (c_first_2, 500);
+		
+		function c_first_3(){	 
+		$.ajax({
+			url: "php/get_message.php",
+			cache: false,
+			success: function(html){		
+				$("#Scenario2_3").html(html); //Insert chat log into the #chatbox div						
+		  	},
+		});
+		}
+		setInterval (c_first_3, 500);
+		function c_first_4(){	 
+		$.ajax({
+			url: "php/get_message.php",
+			cache: false,
+			success: function(html){		
+				$("#Scenario2_4").html(html); //Insert chat log into the #chatbox div						
+		  	},
+		});
+	}
+		setInterval (c_first_4, 500);
+	
 	
 	});
 	

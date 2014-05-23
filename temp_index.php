@@ -57,6 +57,7 @@ a.button {
 
 
 // jQuery Document
+var myTime = "20";
 
 $(document).ready(function(){	
 	function waitFor(){	 

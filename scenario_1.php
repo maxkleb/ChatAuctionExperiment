@@ -17,6 +17,13 @@ header('Location: admin.php');
 exit();
 }
 $tmp = $_GET['scenario'];
+$_SESSION['name'] = 'Admin';
+if ( ! isset ( $_SESSION['t'] ) ) 
+    { 
+        $_SESSION['t'] = 0; 
+    } 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -62,19 +69,22 @@ a.button {
 <div id="Scenario2"></div>
 <div id="Scenario3"></div>
 <div id="Scenario4"></div>
+<?php$_SESSION['t'] = 0;print'$_SESSION['t'];'?>
 </div>
 
 </div>
+
+
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
 
 // jQuery Document
-
+var coun = 0;
 $(document).ready(function(){	
 	function first_1(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first1.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario1").html(html); //Insert chat log into the #chatbox div						
@@ -82,10 +92,9 @@ $(document).ready(function(){
 		});
 		}
 	setInterval (first_1, 500);
-	
 	function first_2(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first2.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2").html(html); //Insert chat log into the #chatbox div						
@@ -94,10 +103,9 @@ $(document).ready(function(){
 		}
 		
 		setInterval (first_2, 500);
-		
 		function first_3(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first3.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario3").html(html); //Insert chat log into the #chatbox div						
@@ -107,7 +115,7 @@ $(document).ready(function(){
 		setInterval (first_3, 500);
 		function first_4(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first4.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario4").html(html); //Insert chat log into the #chatbox div						
@@ -115,7 +123,6 @@ $(document).ready(function(){
 		});
 	}
 		setInterval (first_4, 500);
-	
 	$("#exit").click(function(){
 		window.location = 'index.php';
 	});

@@ -2,7 +2,7 @@
 session_start();
 include 'db_connect.php';
 
-$get_users = mysql_query('SELECT * FROM users WHERE room="'.$_SESSION['roomtype'].'"');
+$get_users = mysql_query('SELECT * FROM usersonline ;');
 if(mysql_num_rows ($get_users) != 2){
 echo "<h4>Please wait: connecting to other players...</h4>";
 }else{

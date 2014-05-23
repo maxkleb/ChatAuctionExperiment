@@ -93,7 +93,7 @@ if(!isset($_POST['scenario']))
 $(document).ready(function(){	
 	function loadUsers(){	 
 		$.ajax({
-			url: "php/get_users.php",
+			url: "php/get_online_users.php",
 			cache: false,
 			success: function(html){		
 				$("#online_list").html(html); //Insert chat log into the #chatbox div						
