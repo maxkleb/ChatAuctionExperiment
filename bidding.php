@@ -5,18 +5,23 @@ include ('php/db_connect.php');
 
 if(!isset( $_POST['bet'])){
 	
-header('Location: temp_index.php');
+header('Location: index.php');
 exit();
 }
  
 $id = $_SESSION['name'];
-$room = $_SESSION['name']/4;
+if($_SESSION['scenario']==3){
+$t_room =  $id['name'];
+$mod = 4;
+$room = $t_room % $mod;
+}
+else{
+$room = $_SESSION['name']/4;}
 $bet = $_POST['bet'];
 $sto = 100;
 $before = $sto - $bet;
 $scenario = $_SESSION['scenario'];
-//print " $scenario ";
-print"$id $room $bet $before";
+
 $query = "INSERT INTO bidtable (id,room,bet,scenario,beforebid,afterbid) VALUES ('$id','$room','$bet','$scenario','$before',$before);";
 
 mysql_query($query);
@@ -60,8 +65,29 @@ a.button:active {
 </head><body>
 <div id="cont">
 	<div id="loginform">
-		<p>Thank you for participation, now you can close the window.</p>	 
+		<p>Thank you for participation!</p>	
+			
 	</div>
+	
+	<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+
+// jQuery Document
+var coun = 0;
+$(document).ready(function(){	
+	function try_again(){	 
+		$.ajax({
+			url: "php/try_again.php",
+			cache: false,
+			success: function(html){		
+				$("#loginform").html(html); //Insert chat log into the #chatbox div						
+		  	},
+		});
+		}
+		setInterval (try_again, 500);
+		});
+		
+</script>
 	
 </body>
 </html>

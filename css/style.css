@@ -194,13 +194,16 @@ background-color:#FFFFFF;height:180px;width:150px;float:left;border:3px solid #A
 	margin:auto;
 	background:#F0FFFD;
 	width: 704px;	
-	height:430px;
+	height:560px;
 		border:1px solid #ACD8F0;
 	 -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 	-moz-border-radius: 5px;
     -webkit-border-radius: 5px; 
 }
+
+
+
 button {
 	text-align:center;
 	background-color: #000033;

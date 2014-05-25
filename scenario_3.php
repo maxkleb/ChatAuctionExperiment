@@ -46,15 +46,22 @@ a.button {
 <title>Admin</title>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head><body>
-<div id="loginform">
-		<p>Please wait: connecting to other players...</p> 
-</div>
 
-<div id="cont">
+<div id="cont" style="height:560px">
 <div id="menu">
 			<p class="welcome">Welcome <b><?php echo $_SESSION['name']; ?></b></p>
-			<p class="logout"><a href="result.php?scenario=<?php echo $tmp?>">Done</a></p>
+			<p class="logout"><a href="result.php?scenario=<?php echo $tmp?>"><b>Done</b></a></p>
 			<div style="clear:both"></div>
+			
+			<div id="m1" style="height:50px;width:700px;float:left;"><h2>BIDDING:</h2></div>
+<div id="m1" style="height:15px;width:30px;float:left;"><b></b></div>
+<div id="m1" style="height:15px;width:130px;float:left;"><b>Room #1</b></div>
+<div id="m1" style="height:15px;width:160px;float:left;"><b>Room #2</b></div>
+<div id="m1" style="height:15px;width:190px;float:left;"><b>Room #3</b></div>
+<div id="m1" style="height:15px;width:80px;float:left;"><b>Room #4</b></div>
+<div id="m1" style="height:30px;width:700px;float:left;"></div>
+			
+			
 			<div id="Scenario1"></div>
 <div id="Scenario2"></div>
 <div id="Scenario3"></div>
@@ -62,6 +69,14 @@ a.button {
 			
 		</div>
 <div id="menu">	
+<div id="m1" style="height:50px;width:700px;float:left;"><h2>CHAT:</h2></div>
+<div id="m1" style="height:15px;width:30px;float:left;"><b></b></div>
+<div id="m1" style="height:15px;width:130px;float:left;"><b>Room #1</b></div>
+<div id="m1" style="height:15px;width:160px;float:left;"><b>Room #2</b></div>
+<div id="m1" style="height:15px;width:190px;float:left;"><b>Room #3</b></div>
+<div id="m1" style="height:15px;width:80px;float:left;"><b>Room #4</b></div>
+<div id="m1" style="height:30px;width:700px;float:left;"></div>
+
 <div id="Scenario2_1"></div>
 <div id="Scenario2_2"></div>
 <div id="Scenario2_3"></div>
@@ -69,6 +84,7 @@ a.button {
 </div>
 
 </div>
+
 
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
@@ -78,7 +94,7 @@ a.button {
 $(document).ready(function(){	
 	function first_1(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first1.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario1").html(html); //Insert chat log into the #chatbox div						
@@ -86,10 +102,9 @@ $(document).ready(function(){
 		});
 		}
 	setInterval (first_1, 500);
-	
 	function first_2(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first2.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2").html(html); //Insert chat log into the #chatbox div						
@@ -98,10 +113,9 @@ $(document).ready(function(){
 		}
 		
 		setInterval (first_2, 500);
-		
 		function first_3(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first3.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario3").html(html); //Insert chat log into the #chatbox div						
@@ -111,24 +125,22 @@ $(document).ready(function(){
 		setInterval (first_3, 500);
 		function first_4(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/first4.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario4").html(html); //Insert chat log into the #chatbox div						
 		  	},
 		});
-	}
+		}
 		setInterval (first_4, 500);
-	
-	$("#exit").click(function(){
-		window.location = 'index.php';
-	});
 	
 	
 	//////CHAT FUNCTIONS
+	
+	
 		function c_first_1(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/get_message.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2_1").html(html); //Insert chat log into the #chatbox div						
@@ -139,7 +151,7 @@ $(document).ready(function(){
 	
 	function c_first_2(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/get_message2.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2_2").html(html); //Insert chat log into the #chatbox div						
@@ -151,7 +163,7 @@ $(document).ready(function(){
 		
 		function c_first_3(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/get_message3.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2_3").html(html); //Insert chat log into the #chatbox div						
@@ -161,7 +173,7 @@ $(document).ready(function(){
 		setInterval (c_first_3, 500);
 		function c_first_4(){	 
 		$.ajax({
-			url: "php/first.php",
+			url: "php/get_message4.php",
 			cache: false,
 			success: function(html){		
 				$("#Scenario2_4").html(html); //Insert chat log into the #chatbox div						

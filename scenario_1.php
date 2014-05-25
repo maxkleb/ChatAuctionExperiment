@@ -53,10 +53,6 @@ a.button {
 <title>Admin</title>
 <link type="text/css" rel="stylesheet" href="css/style.css" />
 </head><body>
-<div id="loginform">
-		<p>Please wait: connecting to other players...</p> 
-</div>
-
 <div id="cont">
 <div id="menu">
 			<p class="welcome">Welcome <b><?php echo $_SESSION['name']; ?></b></p>
@@ -64,6 +60,13 @@ a.button {
 			<div style="clear:both"></div>
 			
 		</div>
+<div id="m1" style="height:50px;width:700px;float:left;"><h2>BIDDING:</h2></div>
+<div id="m1" style="height:15px;width:30px;float:left;"><b></b></div>
+<div id="m1" style="height:15px;width:130px;float:left;"><b>Room #1</b></div>
+<div id="m1" style="height:15px;width:160px;float:left;"><b>Room #2</b></div>
+<div id="m1" style="height:15px;width:190px;float:left;"><b>Room #3</b></div>
+<div id="m1" style="height:15px;width:80px;float:left;"><b>Room #4</b></div>
+<div id="m1" style="height:30px;width:700px;float:left;"></div>
 <div id="menu">	
 <div id="Scenario1"></div>
 <div id="Scenario2"></div>

@@ -6,12 +6,14 @@ session_start();
 include ('php/db_connect.php');
 
 $name = $_SESSION['name'];
-$query = 'SELECT scenarioid FROM admintable ;';
+$query = 'SELECT * FROM admintable ;';
 $scenario = null;
 $result = mysql_query($query);
 if(mysql_num_rows($result)>0){
     $row = mysql_fetch_array($result);
-$scenario = $row['scenarioid'];}
+$scenario = $row['scenarioid'];
+$time =  $row['time'];
+}
 
 
 if(!isset($_SESSION['scenario']) && $scenario!=null){
@@ -67,7 +69,7 @@ a.button:active {
 <script type="text/javascript">
 
 
-var myTime = "5";
+var myTime = <?php echo $time;?>;
 function countDown() {
 	document.form.seconds.value = myTime;
 	if (myTime == 0)

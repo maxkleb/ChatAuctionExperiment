@@ -13,7 +13,7 @@ $_SESSION['Group'] = '';
 function WitForFull(){
 echo'
 <div id="loginform">
-		<p>Please wait: connecting to other players...</p> 
+		<p>Please wait: connecting of other players...</p> 
 	</div>
 ';
 }
@@ -114,7 +114,7 @@ $(document).ready(function(){
 	
 	// var foo="<?php echo $_SESSION['Start'];?>";
 	 //if(foo != 'Start')
-	setInterval (waitFor, 5000);
+	setInterval (waitFor, 10000);
 	});
 
 <?php

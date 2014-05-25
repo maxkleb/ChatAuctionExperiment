@@ -46,7 +46,7 @@ a.button:active {
 <div id="cont">
 	<div id="loginform">
 	<form action="bidding.php" method="post"">
-		<p>Please enter your username and choose your room:</p>
+		<p>Please choose your amount:</p>
 		<input type="text" name="bet" maxlength="18" />
 		 
 		<button name="button" id="button">Done</button>

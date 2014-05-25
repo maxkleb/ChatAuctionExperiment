@@ -10,11 +10,10 @@ if(mysql_num_rows($result)>0){
 $scenario = $row['scenarioid'];}
 
 
-if(!isset($_SESSION['scenario']) && $scenario!=null){
-$_SESSION['scenario'] = $scenario;}
 if($scenario == null){
-echo "<h4>Please wait: connecting to other players...</h4>";
+echo "<h4>Please wait: connecting of other players...</h4>";
 }else{
+$_SESSION['scenario'] = $scenario;
 echo'
 	<div id="loginform">
 	<a href = "add_user.php?scenario=$scenario&name=$name">
