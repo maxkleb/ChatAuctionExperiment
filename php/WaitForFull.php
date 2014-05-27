@@ -3,7 +3,7 @@ session_start();
 include 'db_connect.php';
 
 $get_users = mysql_query('SELECT * FROM usersonline ;');
-if(mysql_num_rows ($get_users) != 2){
+if(mysql_num_rows ($get_users) != 16){
 echo "<h4>Please wait: connecting of other players...</h4>";
 }else{
 echo'
